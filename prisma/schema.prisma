@@ -12,21 +12,21 @@ model Vehicle {
   kind  String @unique
   range Int
   count Int
-  assignments CopAssignment[] // ✅ Relation with CopAssignment
+  assignments CopAssignment[]  
 }
 
 model City {
   id         String @id @default(uuid())
   name       String @unique
   distance   Int
-  assignments CopAssignment[] // ✅ Relation with CopAssignment
-  fugitives  Fugitive[]       // ✅ Relation with Fugitive
+  assignments CopAssignment[]  
+  fugitives  Fugitive[]       
 }
 
 model Cop {
   id   String @id @default(uuid())  
   name String @unique
-  assignments CopAssignment[] // ✅ Relation with CopAssignment
+  assignments CopAssignment[]  
 }
 
 model CopAssignment {
@@ -43,7 +43,7 @@ model CopAssignment {
 
 model Fugitive {
   id     String @id @default(uuid())
-  name   String @unique // ✅ Ensure 'name' is unique
+  name   String @unique  
   cityId String
 
   city City @relation(fields: [cityId], references: [id], onDelete: Cascade)
