@@ -27,31 +27,38 @@ Fugitive Hunt is a **thrilling strategy game** where players assign cops to citi
 - **React Query (@tanstack/react-query)**
 - **Next.js Server Actions** (API Routes)
 
+### **Testing**
+
+- **Jest (Unit & Integration Testing)**
+- **React Testing Library (Component Testing)** (API Routes)
+
 ---
 
 ## 📂 Project Structure
 
-```
-├── prisma/                 # Prisma ORM setup
-│   ├── schema.prisma       # Database schema
-│   ├── seed.ts             # Seeding initial data
-│   └── migrations/         # Migration files
+├── prisma/ # Prisma ORM setup
+│ ├── schema.prisma # Database schema
+│ ├── seed.ts # Seeding initial data
+│ └── migrations/ # Migration files
 │
-├── pages/                  # Next.js Pages
-│   ├── index.tsx           # Homepage
-│   ├── game/               # Game components
-│   ├── api/                # API routes (Next.js Server Actions)
+├── app/ # Next.js App Router
+│ ├── layout.tsx # Root layout
+│ ├── page.tsx # Homepage
+│ ├── game/ # Game components
+│ ├── api/ # API handlers (Next.js Server Actions)
 │
-├── components/             # Reusable UI components
-├── hooks/                  # Custom React hooks
-├── styles/                 # Tailwind CSS styling
-├── utils/                  # Utility functions
+├── components/ # Reusable UI components
+├── hooks/ # Custom React hooks
+├── styles/ # Tailwind CSS styling
+├── utils/ # Utility functions
 │
-├── .env                    # Environment variables
-├── package.json            # Project dependencies
-├── tsconfig.json           # TypeScript config
-└── next.config.ts          # Next.js config
-```
+├── tests/ # Jest & RTL test cases
+├── .env # Environment variables
+├── package.json # Project dependencies
+├── tsconfig.json # TypeScript config
+└── next.config.ts # Next.js config
+
+````
 
 ---
 
@@ -71,7 +78,7 @@ model Vehicle {
   count Int
   assignments CopAssignment[]
 }
-```
+````
 
 ### **City Table**
 
@@ -193,6 +200,22 @@ export function useAssignCop() {
 
 ---
 
+## 🔄 Data Seeding
+
+Before running the seed command, initialize the Prisma Client:
+
+```sh
+npx prisma generate
+```
+
+Then, seed the database with initial data:
+
+```sh
+npm run seed
+```
+
+---
+
 ## 🚀 Setup Instructions
 
 ### **1️⃣ Install Dependencies**
@@ -207,6 +230,10 @@ Create a `.env` file with:
 
 ```
 DATABASE_URL="mysql://user:password@localhost:3306/fugitive_game"
+```
+
+```sh
+npx prisma generate
 ```
 
 ### **3️⃣ Run Database Migrations**
@@ -234,4 +261,5 @@ Runs the **Next.js server** on `http://localhost:3000`.
 ✅ **TailwindCSS & Ant Design UI**
 
 This README provides a **detailed overview** of the project 🚀
+
 # fugitive-hunt
