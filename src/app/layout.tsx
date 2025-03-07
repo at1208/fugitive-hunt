@@ -37,12 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <BackButton />
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                className="flex flex-col items-center justify-center w-full pl-3 pr-3 pb-3"
-              >
+              <motion.div className="flex flex-col items-center justify-center w-full pl-3 pr-3 pb-3">
                 {children}
               </motion.div>
             </Suspense>
