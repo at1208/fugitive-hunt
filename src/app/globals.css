@@ -1,10 +1,9 @@
 @import "tailwindcss";
-/* Neon Glow Effect for Title */
+
 .neon-text {
   text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff99;
 }
 
-/* High Visibility Neon Button */
 .neon-button {
   background: linear-gradient(90deg, #6a62ff, #544982);
   border: none;
@@ -55,7 +54,7 @@
 
 @media (min-width: 640px) {
   .ant-list-item {
-    gap: 8px !important; /* Reduce space between selects */
+    gap: 8px !important;
   }
   .city-seclection-container {
   }
@@ -104,6 +103,4 @@
 
 .ant-select-item-option-selected {
   background-color: #3d3d3d !important;
-}
-.child-container {
 }

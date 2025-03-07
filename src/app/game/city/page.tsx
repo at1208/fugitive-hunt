@@ -185,17 +185,15 @@ export default function AssignCityPage() {
                 )}
               </div>
 
-              {assignments.length > 1 && (
-                <div className="flex items-center justify-center">
-                  <Button
-                    type="text"
-                    size="small"
-                    className="w-[40px] min-w-[40px] h-[40px] flex items-center justify-center"
-                    icon={<CloseOutlined style={{ color: "red" }} />} // Explicitly set color
-                    onClick={() => removeAssignment(index)}
-                  />
-                </div>
-              )}
+              <div className="flex items-center justify-center">
+                <Button
+                  type="text"
+                  size="small"
+                  className="w-[40px] min-w-[40px] h-[40px] flex items-center justify-center"
+                  icon={<CloseOutlined style={{ color: "red" }} />} // Explicitly set color
+                  onClick={() => removeAssignment(index)}
+                />
+              </div>
             </div>
           </List.Item>
         )}

@@ -14,24 +14,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`page-root ${inter.className} transition-colors duration-300 text-white bg-black overflow-hidden`}
       >
-        {/* Animated Background */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-blue-900 to-purple-900 opacity-60"
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
+        <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-purple-900 opacity-60" />
 
-        {/* Floating Particles */}
-        <motion.div
-          className="absolute inset-0 bg-transparent pointer-events-none"
-          animate={{ opacity: [0.2, 0.5, 0.2], x: [-50, 50, -50] }}
-          transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-        >
-          <div className="absolute top-20 left-1/4 w-20 h-20 bg-blue-500 rounded-full opacity-30 blur-3xl"></div>
-          <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-purple-500 rounded-full opacity-30 blur-3xl"></div>
-        </motion.div>
-
-        {/* Game UI Container */}
         <div className="relative flex flex-col items-center justify-center min-h-screen w-full z-10">
           <Providers>
             <Suspense
