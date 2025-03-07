@@ -36,29 +36,29 @@ Fugitive Hunt is a **thrilling strategy game** where players assign cops to citi
 
 ## 📂 Project Structure
 
-├── prisma/ # Prisma ORM setup
-│ ├── schema.prisma # Database schema
-│ ├── seed.ts # Seeding initial data
-│ └── migrations/ # Migration files
+```
+├── prisma/                 # Prisma ORM setup
+│   ├── schema.prisma       # Database schema
+│   ├── seed.ts             # Seeding initial data
+│   └── migrations/         # Migration files
 │
-├── app/ # Next.js App Router
-│ ├── layout.tsx # Root layout
-│ ├── page.tsx # Homepage
-│ ├── game/ # Game components
-│ ├── api/ # API handlers (Next.js Server Actions)
+├── app/                    # Next.js App Router
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx            # Homepage
+│   ├── game/               # Game components
+│   ├── api/                # API handlers (Next.js Server Actions)
 │
-├── components/ # Reusable UI components
-├── hooks/ # Custom React hooks
-├── styles/ # Tailwind CSS styling
-├── utils/ # Utility functions
+├── components/             # Reusable UI components
+├── hooks/                  # Custom React hooks
+├── styles/                 # Tailwind CSS styling
+├── utils/                  # Utility functions
 │
-├── tests/ # Jest & RTL test cases
-├── .env # Environment variables
-├── package.json # Project dependencies
-├── tsconfig.json # TypeScript config
-└── next.config.ts # Next.js config
-
-````
+├── tests/                  # Jest & RTL test cases
+├── .env                    # Environment variables
+├── package.json            # Project dependencies
+├── tsconfig.json           # TypeScript config
+└── next.config.ts          # Next.js config
+```
 
 ---
 
@@ -78,7 +78,7 @@ model Vehicle {
   count Int
   assignments CopAssignment[]
 }
-````
+```
 
 ### **City Table**
 
